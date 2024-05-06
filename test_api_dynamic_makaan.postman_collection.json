@@ -1,0 +1,736 @@
+{
+	"info": {
+		"_postman_id": "b4237c72-e7c2-45a6-a0d7-9d0337ae3eff",
+		"name": "test_api_dynamic_makaan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32866989"
+	},
+	"item": [
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\" : \"sandip\",\r\n    \"email\" : \"email@gmail.com\",\r\n    \"password\" : \"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"email\" : \"email@gmail.com\",\r\n    \"password\" : \"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImlhdCI6MTcxNDExMjE5NywiZXhwIjoxNzE0MTU1Mzk3fQ.OiJhCi_hiOw72ER7RKlpx2lB1daXcuPehZAfV3h8irM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : \"662b438256399f03ea218a67\",\r\n    \"name\" : \"sandip kumar mondal\",\r\n    \"email\" : \"sandipkumar@gmail.com\",\r\n    \"password\" : \"1234567\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIGt1bWFyIG1vbmRhbCIsImVtYWlsIjoic2FuZGlwa3VtYXJAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MTQxMTMxNzcsImV4cCI6MTcxNDE1NjM3N30.V97iPYTCeBF7vytK2ofO6Da3Wg_hquwoqvCa6uUVzZQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6000/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_type_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/carousel-2.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "Sub_Title",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/create/propertytype",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"create",
+						"propertytype"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_type_update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/shirt1.jpg"
+						},
+						{
+							"key": "title",
+							"value": "New Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "New Sub-title",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/updatepropertytype/662b650371ed4fc54973c854",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updatepropertytype",
+						"662b650371ed4fc54973c854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_type_edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/editpropertytype/662b650371ed4fc54973c854",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"editpropertytype",
+						"662b650371ed4fc54973c854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_type_allData",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIGt1bWFyIG1vbmRhbCIsImVtYWlsIjoic2FuZGlwa3VtYXJAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MTQxMjI0MDYsImV4cCI6MTcxNDE2NTYwNn0.Ce8NPM8c0YINiX5uTyeWtWQbmxDL93Vl1v4g1fFHoIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6000/propertytype",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"propertytype"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_list_create",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIGt1bWFyIG1vbmRhbCIsImVtYWlsIjoic2FuZGlwa3VtYXJAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MTQxMjI0MDYsImV4cCI6MTcxNDE2NTYwNn0.Ce8NPM8c0YINiX5uTyeWtWQbmxDL93Vl1v4g1fFHoIE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/laptop.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Title",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "header",
+							"value": "Header",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Address",
+							"type": "text"
+						},
+						{
+							"key": "measuremant",
+							"value": "Measurement",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Type",
+							"type": "text"
+						},
+						{
+							"key": "bath",
+							"value": "Bath",
+							"type": "text"
+						},
+						{
+							"key": "categories",
+							"value": "New",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/create/propertylist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"create",
+						"propertylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_list_update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/pexels-aron-visuals-1743165.jpg"
+						},
+						{
+							"key": "title",
+							"value": "New Title",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "header",
+							"value": "New Header",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "New Address",
+							"type": "text"
+						},
+						{
+							"key": "measuremant",
+							"value": "New Measurement",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Old",
+							"type": "text"
+						},
+						{
+							"key": "bath",
+							"value": "New Bath",
+							"type": "text"
+						},
+						{
+							"key": "categories",
+							"value": "New Categories",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/updatepropertylist/662b724574209d0ec18aa599",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updatepropertylist",
+						"662b724574209d0ec18aa599"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_list_edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/editpropertylist/662b724574209d0ec18aa599",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"editpropertylist",
+						"662b724574209d0ec18aa599"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_list_all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIGt1bWFyIG1vbmRhbCIsImVtYWlsIjoic2FuZGlwa3VtYXJAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MTQxMjI0MDYsImV4cCI6MTcxNDE2NTYwNn0.Ce8NPM8c0YINiX5uTyeWtWQbmxDL93Vl1v4g1fFHoIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6000/propertylist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"propertylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_agent_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/carousel-2.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "Subtitle",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/create/propertyagent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"create",
+						"propertyagent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_agent_edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/editpropertyagent/662b798142ba3b011b3f2015",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"editpropertyagent",
+						"662b798142ba3b011b3f2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_agent_update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/shirt1.jpg"
+						},
+						{
+							"key": "title",
+							"value": "New Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "New Sub Title",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/updatepropertyagent/662b798142ba3b011b3f2015",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updatepropertyagent",
+						"662b798142ba3b011b3f2015"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_agent_all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2FuZGlwIGt1bWFyIG1vbmRhbCIsImVtYWlsIjoic2FuZGlwa3VtYXJAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE3MTQxMjI0MDYsImV4cCI6MTcxNDE2NTYwNn0.Ce8NPM8c0YINiX5uTyeWtWQbmxDL93Vl1v4g1fFHoIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6000/propertagent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"propertagent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_testimonial_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/laptop.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "Sub Title",
+							"type": "text"
+						},
+						{
+							"key": "para",
+							"value": "Para",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/create/testimonial",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"create",
+						"testimonial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_testimonial_edit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "para",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/edittestimonial/662b7ed3dd3bdaeed3b9ebf1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"edittestimonial",
+						"662b7ed3dd3bdaeed3b9ebf1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_testimonial_update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sandip/Downloads/natures-beauty-captured-colorful-flower-close-up-generative-ai.jpg"
+						},
+						{
+							"key": "title",
+							"value": "New Title",
+							"type": "text"
+						},
+						{
+							"key": "sub_title",
+							"value": "New Subtitle",
+							"type": "text"
+						},
+						{
+							"key": "para",
+							"value": "New Para",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6000/updatetestimonial/662b7ed3dd3bdaeed3b9ebf1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"updatetestimonial",
+						"662b7ed3dd3bdaeed3b9ebf1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property_contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\" : \"sandip mondal\",\r\n    \"email\" : \"sandipk@gmail.com\",\r\n    \"subject\" : \"MEARN STACK\",\r\n    \"message\" : \"Hello, welcome to makaan\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/create/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"create",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
